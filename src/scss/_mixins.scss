@@ -1,0 +1,14 @@
+@mixin bloockContent($width, $height, $backgroundColor, $padding) {
+    width: $width;
+    height: $height;
+    background-color: $backgroundColor;
+    padding: $padding;
+}
+
+@mixin textContent($color, $fontSize, $textTransform, $fontWeight, $fontFamily) {
+    color: $color;
+    font-size: $fontSize;
+    text-transform: $textTransform;
+    font-weight: $fontWeight;
+    font-family: $fontFamily;
+}
