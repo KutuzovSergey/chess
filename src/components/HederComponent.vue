@@ -42,7 +42,7 @@ export default {
 	},
 	data(){
 		return {
-			registration: true
+			registration: false
 		}
 	},
 	methods: {

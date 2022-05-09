@@ -1,15 +1,13 @@
 <template>
     <ul class="playing-field__line">
-        <li class="playing-field__cage playing-field__cage_white"></li>
-        <li class="playing-field__cage playing-field__cage_black"></li>
-        <li class="playing-field__cage playing-field__cage_white"></li>
-        <li class="playing-field__cage playing-field__cage_black"></li>
-        <li class="playing-field__cage playing-field__cage_white"></li>
-        <li class="playing-field__cage playing-field__cage_black"></li>
-        <li class="playing-field__cage playing-field__cage_white"></li>
-        <li class="playing-field__cage playing-field__cage_black">
-            <img src="@/assets/chessmans/white/5.png" alt="">
-        </li>
+        <li class="playing-field__cage playing-field__cage_white" key="1" @click="showMoves"></li>
+        <li class="playing-field__cage playing-field__cage_black" key="2" @click="showMoves"></li>
+        <li class="playing-field__cage playing-field__cage_white" key="3" @click="showMoves"></li>
+        <li class="playing-field__cage playing-field__cage_black" key="4" @click="showMoves"></li>
+        <li class="playing-field__cage playing-field__cage_white" key="5" @click="showMoves"></li>
+        <li class="playing-field__cage playing-field__cage_black" key="6" @click="showMoves"></li>
+        <li class="playing-field__cage playing-field__cage_white" key="7" @click="showMoves"></li>
+        <li class="playing-field__cage playing-field__cage_black" key="8" @click="showMoves"></li>
     </ul>
 </template>
 
@@ -19,7 +17,13 @@
 export default {
   name: 'RowSquaresComponents',
   components: {
+  },
+  methods: {
+      showMoves: function(event){
+          console.log(event.target);
+      }
   }
+
 }
 </script>
 

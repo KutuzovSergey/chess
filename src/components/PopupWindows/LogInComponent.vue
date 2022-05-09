@@ -119,6 +119,9 @@ export default {
 		}
 	},
 	methods: {
+		logInUser: function (user){
+			this.$store.dispatch('GET_NEW_USER', user);
+		},
 		logInClose: function () {
 			this.$store.dispatch('GET_LOG_IN_VIEWINGT_WINDOW', false);
 		},
@@ -246,8 +249,10 @@ export default {
 				logInDataObject.gender = 'man';
 				photo_img.src = '';
 
-
 				delete resultObject.repeatPassword;
+				this.logInUser(resultObject);
+
+				this.logInClose();
 			}
 		},
 		resetStylesError: function (){
@@ -269,7 +274,7 @@ export default {
 				button.classList.remove('form__button_disabled');
 				this.lockIndicator = true;
 			}
-		}
+		},
 	},
 	computed: {
 	}
